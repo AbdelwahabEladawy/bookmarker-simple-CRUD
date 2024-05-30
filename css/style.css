@@ -1,0 +1,64 @@
+
+body{
+    background:#F7ECDE;
+
+}
+
+/* start title  */
+
+.heading {
+    border-bottom: 2px dotted grey;
+}
+
+
+.heading span{
+    font-family: "Pacifico", cursive;
+    position: relative !important;
+    transition: 1s;
+}
+#mainTitle::before{
+content: "";
+position: absolute;
+width:100%;
+height:20%;
+bottom: 10px;
+left: 0;
+background: #FEC260;
+z-index: -1;
+transition: 1s;
+
+}
+#mainTitle:hover::before{
+height: 50%;
+}
+#mainTitle::selection{
+    color: black;
+    background: #FEC260;
+}
+/* end title  */
+
+.main h2{
+    background-image: linear-gradient(to right ,#3ca55c,#3ca55c,#b5ac3c,#B2AB49);
+    background-clip: text;
+    color: transparent;
+    font-family: "Righteous", sans-serif;
+
+
+}
+.main h2::selection{
+    color: black;
+    background: #FEC260;
+}
+
+
+.form-section label::selection{
+    color: black;
+    background: #FEC260;
+}
+ .button-container{
+  border-bottom: 2px dotted grey;;
+}
+
+table{
+    vertical-align: middle !important;
+}

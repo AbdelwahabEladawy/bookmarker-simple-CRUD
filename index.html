@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class=" mx-auto container-fluid container-md">
+      <!-- start title -->
+      <section class="heading text-center pt-5 pb-4">
+        <span class="h1" id="mainTitle">Bookmarker</span>
+      </section>
+      <!-- end title -->
+
+      <!-- main section  -->
+      <section class="main row ">
+        <h2 class="text-center pt-3">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <div class="form-section">
+            <div class="mb-3 ">
+                <i class="fa-solid fa-link"></i>
+                <label for="name" class="form-label fw-bold ps-2">
+                  Site name
+                </label>
+                <input
+                id="name"
+                  type="text"
+                  name="name"
+                  class="form-control "
+                  placeholder="Site name"
+                  oninput="nameValidation()"
+                />
+                <small id="nameError" class="text-danger fw-bold d-none" >the name must start capital letter</small>
+              </div>
+          <div class="mb-3 ">
+            <i class="fa-solid fa-link"></i>
+            <label for="siteUrl" class="form-label fw-bold ps-2">
+              Site URL
+            </label>
+            <input
+            id="siteURL"
+              type="url"
+              name="siteUrl"
+              class="form-control"
+              placeholder="Site URL"
+              oninput="validateUrl()"
+            />
+            <small id="urlError" class="text-danger fw-bold d-none" >please enter a valid URL</small>
+          </div>
+        </div>
+    </section>
+    <div class="button-container mb-5">
+        <button class="btn btn-danger  d-block mx-auto  px-5 mb-4" onclick="getInfo()">Submit</button>
+
+    </div>
+    
+<!-- start table   -->
+<table class="table text-center"  >
+    
+<thead>
+    <tr>
+        <td>Index</td>
+        <td>Website Name</td>
+        <td>Visit</td>
+        <td>Delete</td>
+    </tr>
+</thead>
+<tbody id="display-Data">
+
+</tbody>
+</table>
+
+<!-- end  table   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
